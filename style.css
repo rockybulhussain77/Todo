@@ -55,8 +55,10 @@ body {
 .submit_btn {
     padding: 0.575rem 0.875rem;
     font-size: 1rem;
+    font-weight: bold;
     border: 0;
     outline: 1.5px solid #000;
+    text-transform: uppercase;
     letter-spacing: 1.35px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -79,16 +81,18 @@ body {
     display: flex;
     align-items: center;
     margin-bottom:0.875rem ;
-    animation: animate-todo 200ms linear;
+    animation: animate-todo 150ms linear;
     
 }
 
 
 @keyframes animate-todo {
     0% {
+        opacity: 0.3;
         transform: translateY(20px);
     }
     100% {
+        opacity: 1;
         transform: translateY(0);
     }
 }
@@ -99,8 +103,8 @@ body {
 
 #checkbox {
     flex: auto 1 auto;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 .todo_title {
@@ -142,37 +146,14 @@ body {
 
 }
 
-.overlay {
-    position: fixed;
-    inset: 16px;
-    pointer-events: none;
-}
-
-.show_list {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: fit-content;
-    padding: 0.35rem 0.875rem;
-    background: rgba(239, 243, 234, 30);
-    opacity: 0.7;
+.empty_todo {
+    background: #fff;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
     border-radius: 4px;
-    box-shadow: 2px 4px 10px 5px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    animation: animate 300ms linear;
-
 }
 
-@keyframes animate {
-    0% {
-         scale: 0;
-        transform: translateY(80px);
-    }
-    100% {
-        scale: 1;
-        transform: translateY(0px);
-    }
-
+.hide {
+    display: none;
 }
